@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"btl_esd\startup_stm32f103xb.o"
+"btl_esd\flash.o"
+"btl_esd\rc522.o"
+"btl_esd\main.o"
+"btl_esd\stm32f1xx_it.o"
+"btl_esd\stm32f1xx_hal_msp.o"
+"btl_esd\stm32f1xx_hal_gpio_ex.o"
+"btl_esd\stm32f1xx_hal_i2c.o"
+"btl_esd\stm32f1xx_hal.o"
+"btl_esd\stm32f1xx_hal_rcc.o"
+"btl_esd\stm32f1xx_hal_rcc_ex.o"
+"btl_esd\stm32f1xx_hal_gpio.o"
+"btl_esd\stm32f1xx_hal_dma.o"
+"btl_esd\stm32f1xx_hal_cortex.o"
+"btl_esd\stm32f1xx_hal_pwr.o"
+"btl_esd\stm32f1xx_hal_flash.o"
+"btl_esd\stm32f1xx_hal_flash_ex.o"
+"btl_esd\stm32f1xx_hal_exti.o"
+"btl_esd\stm32f1xx_hal_spi.o"
+"btl_esd\stm32f1xx_hal_tim.o"
+"btl_esd\stm32f1xx_hal_tim_ex.o"
+"btl_esd\system_stm32f1xx.o"
+--strict --scatter "BTL_ESD\BTL_ESD.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "BTL_ESD.map" -o BTL_ESD\BTL_ESD.axf

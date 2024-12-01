@@ -1,0 +1,11 @@
+void send_command(uint8_t data)
+{
+	uint8_t buf[4]={(data&0xF0)|0x04,(data&0xF0)|0x00,(data<<4)|0x04,(data<<4)|0x00};
+	HAL_I2C_Master_Transmit(&hi2c1,addr_pcf8574,buf, 4,HAL_MAX_DELAY);
+}
+
+void send_data(uint8_t data)
+{
+	uint8_t buf[4]={(data&0xF0)|0x05,(data&0xF0)|0x01,(data<<4)|0x05,(data<<4)|0x01};
+	HAL_I2C_Master_Transmit(&hi2c1,addr_pcf8574,buf, 4,HAL_MAX_DELAY);
+}
